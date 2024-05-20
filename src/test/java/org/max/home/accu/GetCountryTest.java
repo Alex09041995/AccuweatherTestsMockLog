@@ -29,6 +29,7 @@ public class GetCountryTest extends AbstractTest {
     public void checkGetCountry() throws Exception {
         Mockito.when(mockCountry.getId()).thenReturn("");
         Mockito.when(mockCountry.getLocalizedName()).thenReturn("");
+        //нельза передавать пустое значение в Double.valueOf
         Mockito.when(mockCountry.getEnglishName()).thenReturn(Double.valueOf(""));
         ObjectMapper objectMapper = new ObjectMapper();
         String json = objectMapper.writeValueAsString(mockCountry);
