@@ -6,13 +6,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import java.util.List;
+import java.util.function.Supplier;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
     "Headline",
     "DailyForecasts"
 })
-public class Weather {
+public abstract class Weather implements Supplier<String> {
 
     @JsonProperty("Headline")
     private Headline headline;

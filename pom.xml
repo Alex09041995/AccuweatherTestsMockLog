@@ -24,8 +24,8 @@
     <!-- Архивирование -->
     <packaging>jar</packaging>
 
-    <name>Демо проект</name>
-    <description>Демонстрационный проект для курса введения в автоматизацию</description>
+    <name>Проект с авто-тестами сайта "AccuWeather"</name>
+    <description>Проект с авто-тестами для сайта "AccuWeather" </description>
     <url>http://demo.max.org</url>
 
     <!-- Зависимости -->

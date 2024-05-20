@@ -32,7 +32,12 @@ public class GetWeatherOneDayTest extends AbstractTest{
         logger.info("Тест код ответ 200 запущен");
         //given
         ObjectMapper mapper = new ObjectMapper();
-        Weather weather = new Weather();
+        Weather weather = new Weather() {
+            @Override
+            public String get() {
+                return "";
+            }
+        };
         Headline headline = new Headline();
         headline.setCategory("Категория");
         headline.setText("Текст");

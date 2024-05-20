@@ -1,5 +1,4 @@
-
-package org.max.seminar.accu.location;
+package org.max.home.accu.weather;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -7,8 +6,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "ID",
-    "LocalizedName"
+        "ID",
+        "LocalizedName",
+        "EnglishName"
 })
 public class Country {
 
@@ -16,6 +16,8 @@ public class Country {
     private String id;
     @JsonProperty("LocalizedName")
     private String localizedName;
+    @JsonProperty("EnglishName")
+    private String englishName;
 
     @JsonProperty("ID")
     public String getId() {
@@ -37,7 +39,13 @@ public class Country {
         this.localizedName = localizedName;
     }
 
-    public double getEnglishName() {
-       return getEnglishName();
+    @JsonProperty("EnglishName")
+    public String getEnglishName() {
+        return englishName;
+    }
+
+    @JsonProperty("EnglishName")
+    public void setEnglishName(String englishName) {
+        this.englishName = englishName;
     }
 }
