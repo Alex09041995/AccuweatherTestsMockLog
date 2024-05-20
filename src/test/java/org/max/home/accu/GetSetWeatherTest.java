@@ -41,6 +41,7 @@ public class GetSetWeatherTest extends AbstractTest {
         weather.setDailyForecasts(List.of(mockDailyForecast));
         String json = objectMapper.writeValueAsString(weather);
         Weather deserializedWeather = objectMapper.readValue(json, Weather.class);
+        //тут надо передать Supplier, например logger.info(() -> "Преобразование класса - Погода");
         logger.info("Преобразование класса - Погода");
         Assertions.assertNotNull(deserializedWeather.getHeadline());
         Assertions.assertNotNull(deserializedWeather.getDailyForecasts().get(0));
